@@ -393,45 +393,34 @@
         </div>
 
         <div style="background:#131417;border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:34px">
-          <sc-if value="{{ sentContact }}" hint-placeholder-val="{{ false }}">
-            <div style="text-align:center;padding:40px 10px">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-              </div>
-              <h3 style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;color:#fff;margin:0 0 8px">Recebido! 🚀</h3>
-              <p style="font-size:15px;line-height:1.6;color:#9BA1AC;margin:0">Obrigado pelo contato. Retorno em breve com os próximos passos.</p>
+          <form id="w3b-contact-form" style="display:flex;flex-direction:column;gap:16px">
+            <div>
+              <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">NOME</label>
+              <input name="nome" required placeholder="Seu nome" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none">
             </div>
-          </sc-if>
-          <sc-if value="{{ notSentContact }}" hint-placeholder-val="{{ true }}">
-            <form onSubmit="{{ handleContact }}" style="display:flex;flex-direction:column;gap:16px">
-              <div>
-                <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">NOME</label>
-                <input name="nome" required placeholder="Seu nome" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" style-focus="border-color:#2563EB">
-              </div>
-              <div>
-                <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">WHATSAPP</label>
-                <input name="whatsapp" placeholder="(00) 00000-0000" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" style-focus="border-color:#2563EB">
-              </div>
-              <div>
-                <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">E-MAIL</label>
-                <input name="email" type="email" placeholder="seu@email.com" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" style-focus="border-color:#2563EB">
-              </div>
-              <div>
-                <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">QUAL PLANO TE INTERESSA?</label>
-                <select name="plano" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none" style-focus="border-color:#2563EB">
-                  <option>Landing Page Validada</option>
-                  <option>Site Institucional Validado</option>
-                  <option>Site Institucional Personalizado</option>
-                  <option>Ainda não sei</option>
-                </select>
-              </div>
-              <div>
-                <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">SOBRE O PROJETO</label>
-                <textarea name="msg" rows="3" placeholder="Me conte um pouco sobre o que você precisa..." style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none;resize:vertical" style-focus="border-color:#2563EB"></textarea>
-              </div>
-              <button type="submit" style="border:0;cursor:pointer;background:linear-gradient(135deg,#3B82F6,#1D4ED8);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:11px;box-shadow:0 6px 20px rgba(37,99,235,.35);margin-top:4px">Solicitar proposta →</button>
-            </form>
-          </sc-if>
+            <div>
+              <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">WHATSAPP</label>
+              <input name="whatsapp" placeholder="(00) 00000-0000" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none">
+            </div>
+            <div>
+              <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">E-MAIL</label>
+              <input name="email" type="email" placeholder="seu@email.com" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none">
+            </div>
+            <div>
+              <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">QUAL PLANO TE INTERESSA?</label>
+              <select name="plano" style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none">
+                <option>Landing Page Validada</option>
+                <option>Site Institucional Validado</option>
+                <option>Site Institucional Personalizado</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:#8A909C;margin-bottom:8px">SOBRE O PROJETO</label>
+              <textarea name="msg" rows="3" placeholder="Me conte um pouco sobre o que você precisa..." style="width:100%;background:#0A0A0B;border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:13px 15px;color:#EDEFF3;font-family:'Instrument Sans',sans-serif;font-size:15px;outline:none;resize:vertical"></textarea>
+            </div>
+            <button type="submit" style="border:0;cursor:pointer;background:linear-gradient(135deg,#3B82F6,#1D4ED8);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;padding:15px;border-radius:11px;box-shadow:0 6px 20px rgba(37,99,235,.35);margin-top:4px">Solicitar proposta →</button>
+          </form>
         </div>
       </div>
     </div>
@@ -468,29 +457,6 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { openFaq: 0, sentContact: false };
-  toggleFaq(i) {
-    this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }));
-  }
-  renderVals() {
-    const faqs = [
-      { q: 'Qual a diferença entre landing page e site institucional?', a: 'Landing page é uma página única, focada em gerar contato rápido. Site institucional tem várias páginas (até 15, se for personalizado) e mostra mais sobre o seu negócio.' },
-      { q: 'Quanto tempo demora?', a: '7 dias úteis nos planos validados; no personalizado, o prazo é combinado conforme o projeto.' },
-      { q: 'O site fica no meu nome?', a: 'Sim — domínio sempre registrado no seu CPF/CNPJ, em qualquer plano.' },
-      { q: 'Posso pedir algo diferente dos modelos prontos?', a: 'Sim — esse é o Site Institucional Personalizado, com estrutura sob medida.' },
-      { q: 'Se eu quiser sair, fico preso a vocês?', a: 'Não — o arquivo é seu e pode ser usado por qualquer profissional.' },
-    ];
-    return {
-      sentContact: this.state.sentContact,
-      notSentContact: !this.state.sentContact,
-      handleContact: (e) => { e.preventDefault(); this.setState({ sentContact: true }); },
-      faqs: faqs.map((f, i) => ({ ...f, index: i, isOpen: this.state.openFaq === i, sign: this.state.openFaq === i ? '−' : '+', bodyStyle: this.state.openFaq === i ? 'max-height:300px;opacity:1;padding-top:14px' : 'max-height:0;opacity:0;padding-top:0', toggle: () => this.toggleFaq(i) })),
-    };
-  }
-}
-</script>
 <script>
   document.querySelectorAll('.w3b-faq-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -512,6 +478,27 @@ class Component extends DCLogic {
         item.querySelector('.w3b-faq-sign').textContent = '−';
       }
     });
+  });
+</script>
+<script>
+  var w3bContactForm = document.getElementById('w3b-contact-form');
+  w3bContactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(w3bContactForm);
+    var nome = (data.get('nome') || '').trim();
+    var whatsapp = (data.get('whatsapp') || '').trim();
+    var email = (data.get('email') || '').trim();
+    var plano = (data.get('plano') || '').trim();
+    var msg = (data.get('msg') || '').trim();
+
+    var lines = ['Olá! Vim pelo site e quero saber mais sobre o ' + plano + '.', ''];
+    lines.push('Nome: ' + nome);
+    if (whatsapp) lines.push('WhatsApp: ' + whatsapp);
+    if (email) lines.push('E-mail: ' + email);
+    if (msg) lines.push('Sobre o projeto: ' + msg);
+
+    var text = encodeURIComponent(lines.join('\n'));
+    window.location.href = 'https://wa.me/5519999614742?text=' + text;
   });
 </script>
 </body>
