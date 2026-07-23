@@ -20,8 +20,9 @@
   a:hover { color:#93C5FD; }
   ::selection { background:rgba(37,99,235,.4); color:#fff; }
   @keyframes w3bpulse { 0%,100%{ opacity:.5; } 50%{ opacity:1; } }
+  .w3b-example-card { transition:border-color .2s ease; }
+  .w3b-example-card:hover { border-color:rgba(37,99,235,.5); }
 </style>
-<script src="./assets/image-slot.js"></script>
 </helmet>
 
 <div style="max-width:100%;overflow-x:hidden;background:#0A0A0B">
@@ -185,30 +186,58 @@
         <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4.4vw,46px);font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.05">Alguns projetos no ar</h2>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px">
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
-          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000">
-            <image-slot id="w3b-ex-1" shape="rect" fit="cover" placeholder="Arraste um print do projeto"></image-slot>
+        <!-- Edge (Landing Page) — link ainda em processamento -->
+        <div class="w3b-example-card" style="border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
+          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000;display:flex;align-items:center;justify-content:center">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#5B616C">Link em breve</span>
           </div>
           <div style="padding:24px 26px">
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(37,99,235,.15);color:#60A5FA;border:1px solid rgba(37,99,235,.4)">Landing Page</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(37,99,235,.15);color:#60A5FA;border:1px solid rgba(37,99,235,.4)">Landing Page · Edge</span>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Projeto de exemplo 01</h3>
-            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Espaço editável — adicione o nome e uma breve descrição deste trabalho.</p>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Modelo Edge</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Exemplo em publicação — link chega em breve.</p>
           </div>
         </div>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
-          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000">
-            <image-slot id="w3b-ex-2" shape="rect" fit="cover" placeholder="Arraste um print do projeto"></image-slot>
+        <!-- Flow (Site Institucional) -->
+        <a class="w3b-example-card" href="https://marina-alencar-nutricao.w3bsites.com.br" target="_blank" rel="noopener" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
+          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000;overflow:hidden">
+            <iframe src="https://marina-alencar-nutricao.w3bsites.com.br" title="Prévia — Flow" loading="lazy" scrolling="no" style="position:absolute;top:0;left:0;width:400%;height:400%;border:0;transform:scale(.25);transform-origin:0 0;pointer-events:none"></iframe>
           </div>
           <div style="padding:24px 26px">
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
-              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.06);color:#C7CCD4;border:1px solid rgba(255,255,255,.1)">Institucional</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.06);color:#C7CCD4;border:1px solid rgba(255,255,255,.1)">Site Institucional · Flow</span>
             </div>
-            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Projeto de exemplo 02</h3>
-            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Espaço editável — adicione o nome e uma breve descrição deste trabalho.</p>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Dra. Marina Alencar</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Nutrição, bem-estar e qualidade de vida — clique pra ver o site completo.</p>
           </div>
-        </div>
+        </a>
+        <!-- Mono (Site Institucional) -->
+        <a class="w3b-example-card" href="https://wellness-site.w3bsites.com.br" target="_blank" rel="noopener" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
+          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000;overflow:hidden">
+            <iframe src="https://wellness-site.w3bsites.com.br" title="Prévia — Mono" loading="lazy" scrolling="no" style="position:absolute;top:0;left:0;width:400%;height:400%;border:0;transform:scale(.25);transform-origin:0 0;pointer-events:none"></iframe>
+          </div>
+          <div style="padding:24px 26px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.06);color:#C7CCD4;border:1px solid rgba(255,255,255,.1)">Site Institucional · Mono</span>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Dra. Marina Almeida</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Emagrecimento, performance e bem-estar — clique pra ver o site completo.</p>
+          </div>
+        </a>
+        <!-- Pulse (Site Institucional) -->
+        <a class="w3b-example-card" href="https://marinanutri.w3bsites.com.br" target="_blank" rel="noopener" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:#131417">
+          <div style="position:relative;width:100%;aspect-ratio:16/10;background:#000;overflow:hidden">
+            <iframe src="https://marinanutri.w3bsites.com.br" title="Prévia — Pulse" loading="lazy" scrolling="no" style="position:absolute;top:0;left:0;width:400%;height:400%;border:0;transform:scale(.25);transform-origin:0 0;pointer-events:none"></iframe>
+          </div>
+          <div style="padding:24px 26px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 11px;border-radius:100px;background:rgba(255,255,255,.06);color:#C7CCD4;border:1px solid rgba(255,255,255,.1)">Site Institucional · Pulse</span>
+            </div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:#fff;margin:0 0 6px">Dra. Marina Costa</h3>
+            <p style="font-size:14.5px;line-height:1.55;color:#9BA1AC;margin:0">Nutricionista — clique pra ver o site completo.</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
