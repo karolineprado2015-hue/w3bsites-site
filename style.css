@@ -224,3 +224,16 @@ h1,h2,h3,.hero__ic,.mock h4{font-weight:500}
 .chipf{position:absolute;background:#fff;color:var(--navy);font-size:.74rem;font-weight:600;padding:8px 14px;border-radius:999px;box-shadow:0 14px 30px rgba(14,15,21,.22);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
 .chipf i{width:8px;height:8px;border-radius:50%;background:var(--green)}
 .chipf--a{left:-26px;bottom:34px}.chipf--b{right:-18px;top:-16px;background:#FFC93C}.chipf--c{right:14px;bottom:-14px}
+
+/* faixa dos dois serviços e ícones das dores */
+.two{padding:10px 0 0}
+.two__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1100px;margin:0 auto}
+.two__c{border-radius:28px;padding:38px 36px;display:flex;flex-direction:column;gap:10px;transition:.25s;border:1px solid var(--line);background:#fff;border-top:4px solid var(--blue)}
+.two__c--b{background:#0E0F15;border-color:#0E0F15;border-top-color:var(--green)}
+.two__c h3{font-size:2rem}.two__c p{font-size:1rem;max-width:26em;color:var(--ink)}
+.two__c--b h3{color:#fff}.two__c--b p{color:#B4B9CE}.two__c--b .eyebrow{color:var(--yellow)}
+.two__l{margin-top:10px;font-weight:600;color:var(--blue);font-size:.95rem}.two__c--b .two__l{color:var(--green)}
+.two__c:hover{transform:translateY(-4px);box-shadow:0 26px 50px rgba(22,20,63,.12)}
+.q b svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero__cta .btn--green{background:#2FD49A;color:#0E0F15}
+@media(max-width:800px){.two__grid{grid-template-columns:1fr}}
