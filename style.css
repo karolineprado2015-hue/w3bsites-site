@@ -174,3 +174,53 @@ h1,h2,h3,.hero__ic,.mock h4{font-weight:500}
 .cta__links a.m{color:#fff}
 .plan--hot{background:#0E0F15;border-color:#0E0F15}.plan--hot .tag{color:var(--yellow)}
 .exc__note{font-size:.78rem;color:var(--gray);margin:-26px 0 34px}
+
+/* Seção Instagram profissional (fundo grafite) */
+.btn--green{background:#2FD49A;color:#0E0F15}.btn--green:hover{background:#5BEBB8}
+.ig{background:#0E0F15;color:#B4B9CE;padding:120px 0;margin-top:120px}
+.ig h2{color:#fff;font-size:clamp(2rem,4.2vw,3.2rem);margin:14px 0 22px}.ig h2 .g{color:#8A8FA3}
+.ig .eyebrow{color:var(--yellow)}
+.ig__top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ig__sub{font-size:1.2rem;color:#fff;margin-bottom:16px;max-width:26em}.ig__txt{font-size:1.02rem;max-width:30em;margin-bottom:30px;color:#B4B9CE}
+.ig__note{margin-top:16px;font-size:.88rem;color:#9AA0B8;max-width:30em}
+.ig__imgs{position:relative;height:520px}
+.ig__imgs img{position:absolute;width:44%;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.ig__imgs .i1{left:0;top:50px;transform:rotate(-6deg)}.ig__imgs .i2{left:28%;top:0;transform:rotate(1.5deg);z-index:2}.ig__imgs .i3{right:0;top:60px;transform:rotate(7deg)}
+.ig__cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:80px}
+.igc{background:#fff;border-radius:26px;padding:28px 24px;border-top:4px solid var(--green)}
+.igc:nth-child(2){border-top-color:var(--blue)}.igc:nth-child(3){border-top-color:var(--pink)}.igc:nth-child(4){border-top-color:var(--yellow)}
+.igc__ic{width:44px;height:44px;border-radius:12px;background:var(--bg);display:grid;place-items:center;margin-bottom:16px}
+.igc__ic svg{width:22px;height:22px;fill:none;stroke:var(--navy);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.igc h3{font-size:1.15rem;margin-bottom:8px}.igc p{font-size:.9rem;color:var(--ink);line-height:1.55}
+.ig__how{margin-top:80px}
+.ig__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:22px}
+.igs{display:flex;gap:18px;align-items:flex-start;background:#171923;border-radius:22px;padding:26px 24px}
+.igs b{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;color:#0E0F15;font-weight:700}
+.igs h3{color:#fff;font-size:1.25rem;margin-bottom:4px}.igs p{font-size:.92rem;color:#B4B9CE}
+.ig__bottom{display:grid;grid-template-columns:.95fr 1.05fr;gap:40px;margin-top:80px;align-items:start}
+.igform{background:#fff;border-radius:28px;padding:32px;display:grid;gap:12px;border-top:4px solid var(--green)}
+.igform h3{font-size:1.3rem;margin-bottom:6px}
+.igform label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);font-weight:700;display:grid;gap:6px}
+.igform input{font:500 .95rem var(--sans);border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:12px 14px;color:var(--navy);outline:none}.igform input:focus{border-color:var(--blue)}
+.igform .btn{justify-content:center}
+.igok{display:none;background:#e6fbf3;color:#0b5f43;border-radius:12px;padding:12px 14px;font-size:.92rem;font-weight:500}
+.igfaq{display:grid;gap:10px}.igfaq .eyebrow{margin-bottom:6px}
+.igfaq details{background:#171923;border-radius:18px;padding:4px 22px}
+.igfaq summary{cursor:pointer;list-style:none;color:#fff;font-weight:600;font-size:1.02rem;padding:16px 0;display:flex;justify-content:space-between;gap:16px}
+.igfaq summary::after{content:"+";color:var(--green);font-size:1.4rem;line-height:1}.igfaq details[open] summary::after{content:"–"}
+.igfaq details p{padding:0 0 18px;font-size:.92rem;color:#B4B9CE}
+@media(max-width:1000px){.ig__top,.ig__bottom,.ig__steps{grid-template-columns:1fr}.ig__cards{grid-template-columns:1fr 1fr}.ig__imgs{height:420px}}
+@media(max-width:600px){.ig__cards{grid-template-columns:1fr}}
+.ig__imgs{height:560px}
+.ig__imgs img{width:39%}
+.ig__imgs .i1{left:0;top:70px;transform:rotate(-5deg)}.ig__imgs .i2{left:30.5%;top:10px;transform:rotate(1deg)}.ig__imgs .i3{right:0;top:80px;transform:rotate(5deg)}
+
+/* conteúdo da caixa azul do hero */
+.mock__img{overflow:visible;display:grid;place-items:center}
+.mock__img::after{display:none}
+.mock__img .mini{width:84%;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 50px rgba(14,15,21,.35);transform:rotate(-3deg)}
+.mini__bar{display:flex;gap:5px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--line)}.mini__bar i{width:8px;height:8px;border-radius:50%;background:#e5e8f2}
+.mock__img .mini img{width:100%;height:auto;display:block}
+.chipf{position:absolute;background:#fff;color:var(--navy);font-size:.74rem;font-weight:600;padding:8px 14px;border-radius:999px;box-shadow:0 14px 30px rgba(14,15,21,.22);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.chipf i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.chipf--a{left:-26px;bottom:34px}.chipf--b{right:-18px;top:-16px;background:#FFC93C}.chipf--c{right:14px;bottom:-14px}
